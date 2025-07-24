@@ -78,7 +78,7 @@ This assignment evaluates your Laravel development skills through a practical CS
 
 ## Sample Data
 
-A sample CSV file is provided at `/public/sample-transactions.csv` with 20 transaction records.
+A sample CSV file is provided: [Download sample-transactions.csv](/public/sample-transactions.csv) with 20 transaction records.
 
 ### CSV Format
 ```csv
@@ -174,54 +174,28 @@ public/
 
 ### What to Submit
 1. **Complete source code** in a GitHub repository
-2. **README.md** with setup instructions
-3. **SUBMISSION.md** with:
-   - Feature completion checklist
-   - Challenges faced and solutions
-   - Testing approach
-   - Time spent on each task
+2. **Feature completion checklist** (see SUBMISSION_TEMPLATE.md)
 
-### Submission Process
+### How to Submit
 1. Fork this repository
 2. Complete the assignment
-3. Create a pull request with detailed description
-4. Email the repository URL to the hiring team
+3. Push your code to your GitHub repository
+4. Email us the GitHub repository URL
 
-### Email Template
-```
-Subject: Laravel Developer Assignment Submission - [Your Name]
-
-Hi Orca Tech Team,
-
-I have completed the Laravel Developer Assignment. Here are the details:
-
-Repository URL: [your-repo-url]
-Estimated Time Spent: [X hours]
-Key Features Implemented: [brief list]
-
-Looking forward to discussing my implementation.
-
-Best regards,
-[Your Name]
-```
+**Email:** [hiring-team@orcatech.com]  
+**Subject:** Laravel Developer Assignment - [Your Name]
 
 ## Support
 
-If you have questions about the assignment requirements:
-1. Review this README thoroughly
-2. Check the sample CSV file format
-3. Review Laravel documentation for best practices
-4. Contact the hiring team for clarification if needed
+Questions about the assignment? Contact the hiring team at [hiring-team@orcatech.com]
 
 ## Tips for Success
 
-- Start with the database design and model
-- Build the upload functionality first
-- Add validation and error handling early
-- Test your CSV processing with the sample file
-- Keep the UI simple and professional
-- Write tests as you build features
-- Document your code and decisions
+- **Start simple:** Build the upload functionality first, then add features
+- **Use the sample CSV:** Test your implementation with the provided sample file
+- **Focus on core features:** Get the main functionality working before adding extras
+- **Clean code:** Follow Laravel conventions and keep your code organized
+- **Test early:** Validate your CSV processing works correctly
 
 ---
 

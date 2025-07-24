@@ -3,8 +3,7 @@
 **Candidate Name:** [Your Full Name]  
 **Email:** [your.email@domain.com]  
 **Date Submitted:** [YYYY-MM-DD]  
-**Repository URL:** [https://github.com/yourusername/orca-tech-assignment]  
-**Estimated Time Spent:** [X hours]
+**Repository URL:** [https://github.com/yourusername/orca-tech-assignment]
 
 ---
 
