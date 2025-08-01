@@ -28,10 +28,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Test files located in `tests/Feature/` and `tests/Unit/`
 
 ### Assignment Setup
-- CSV Upload Assignment: Transaction management system
-- Database migration for Transaction model with proper indexes
-- Sample CSV file with 20 transaction records at `/public/sample-transactions.csv`
-- Sample user: test@example.com / password: password
+- This is a clean Laravel 12 application with basic authentication
+- Developers will build a complete CSV upload and transaction management system
+- Sample user for testing: test@example.com / password: password
 
 ## Architecture Overview
 
@@ -107,14 +106,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Prettier formatting with Tailwind plugin
 - Theme switching (light/dark mode)
 
-### Assignment-Specific Models
+### Developer Assignment Notes
 
-#### Transaction Model (`app/Models/Transaction.php`)
-- Fields: customer_name, email, last4, currency, amount, type (payment/refund/chargeback), status (completed/pending/failed), transaction_date
-- Scopes: byType(), byStatus(), search() (by customer name or email)
-- Accessors: formatted_amount, status_badge_color, type_badge_color
-- Database indexes on email, type+status, customer_name, transaction_date for performance
-- Proper validation and casting (amount as decimal:2, transaction_date as datetime)
+#### Expected Implementation
+- Developers will create Transaction model with proper fields, validation, scopes, and accessors
+- Database design should include appropriate indexes for performance
+- CSV upload functionality with proper validation and error handling
+- Transaction listing with search, filtering, and pagination capabilities
 
 ## Code Quality Tools
 
