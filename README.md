@@ -1,10 +1,9 @@
-# Orca Tech - Laravel Developer Assignment
+# W2W Tech - Laravel Developer Assignment
 
 ## Overview
 
-Build a CSV upload and transaction management system using Laravel 12 with Vue.js/Inertia.js.
+Build a CSV upload and transaction management system using Laravel 12 with Vue.js/React with Inertia.js or API.
 
-**Expected Time:** 3-5 hours
 
 ## Getting Started
 
@@ -12,7 +11,7 @@ Build a CSV upload and transaction management system using Laravel 12 with Vue.j
 - PHP 8.2+
 - Composer
 - Node.js 18+ and npm
-- SQLite (included with PHP)
+- SQLite or MySQL or PostgreSQL (SQLite is included with PHP)
 
 ### Installation
 
@@ -58,16 +57,23 @@ Build a complete CSV upload and transaction management system from scratch.
 - [ ] Customer fields: `name`, `email`, `created_at`, `updated_at`
 - [ ] Create `Transaction` model and migration  
 - [ ] Transaction fields: `customer_id`, `last4`, `currency`, `amount`, `type`, `status`, `transaction_date`
-- [ ] Set up proper relationship: Customer hasMany Transactions, Transaction belongsTo Customer
+- [ ] Set up proper relationship
 - [ ] Add appropriate database indexes and foreign key constraints
 
 ### Task 2: CSV Upload Functionality  
 - [ ] Create file upload form with validation
 - [ ] Process CSV data: create/find customers and link transactions
+- [ ] create a service to process the csv data
 - [ ] Handle duplicate customers (match by email)
 - [ ] Handle errors and provide user feedback
 
-### Task 3: Data Display
+### Task 3: Data Display & Analytics
+- [ ] Create aggregated data dashboard with key metrics:
+  - [ ] Total number of transactions
+  - [ ] Total number of customers
+  - [ ] Total transaction amount (by currency)
+  - [ ] Transaction breakdown by status (completed, pending, failed)
+  - [ ] Transaction breakdown by type (payment, refund, chargeback)
 - [ ] Create transactions listing page with pagination
 - [ ] Add search functionality (customer name, email)
 - [ ] Add filters for transaction type and status
@@ -77,9 +83,9 @@ Build a complete CSV upload and transaction management system from scratch.
 - [ ] Write basic feature tests
 - [ ] Follow Laravel conventions
 
-## Sample Data
+## Sample CSV Data
 
-Use the provided CSV file at `/public/sample-transactions.csv` for testing.
+Download the sample CSV file for testing: [sample-transactions.csv](./public/sample-transactions.csv)
 
 ### CSV Format
 ```csv
@@ -98,6 +104,7 @@ Jane Doe,jane@example.com,5678,EUR,89.99,payment,pending,2024-01-16 09:15:00
 - **status**: Transaction status: completed, pending, or failed (required)
 - **transaction_date**: Transaction timestamp (required, YYYY-MM-DD HH:MM:SS format)
 
+
 **Note**: During CSV processing, create Customer records if they don't exist (match by email), then create Transaction records linked to the customer via `customer_id`.
 
 ## Technical Requirements
@@ -111,7 +118,7 @@ Jane Doe,jane@example.com,5678,EUR,89.99,payment,pending,2024-01-16 09:15:00
 - Database migrations with indexes and foreign key constraints
 
 ### Frontend  
-- Vue.js 3 with Inertia.js
+- Vue.js 3 with either API or Inertia.js
 - Tailwind CSS for styling
 - Responsive design
 - Form validation with feedback
@@ -134,7 +141,7 @@ npm run build
 
 | Criteria | Weight |
 |----------|--------|
-| **Functionality** | 40% |
+| **Functionality** | 50% |
 | **Code Quality** | 30% |
 | **Database Design** | 20% |
 | **Testing** | 10% |
