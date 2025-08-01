@@ -16,27 +16,16 @@ Build a CSV upload and transaction management system using Laravel 12 with Vue.j
 
 1. **Clone the repository**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/dahalros/developer_assignment.git
    cd developer_assignment
    ```
 
 2. **Install dependencies**
-   ```bash
-   composer install
-   npm install
-   ```
-
+  
 3. **Environment setup**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
 
 4. **Database setup**
-   ```bash
-   touch database/database.sqlite
-   php artisan migrate
-   ```
+
 
 5. **Start development servers**
    ```bash
