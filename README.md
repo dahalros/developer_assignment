@@ -52,35 +52,26 @@ Build a CSV upload and transaction management system using Laravel 12 with Vue.j
 Build a simple CSV upload and transaction listing system.
 
 ### Task 1: Database Design & Models
-- [ ] Create `Customer` model and migration
-- [ ] Customer fields: `name`, `email`, `created_at`, `updated_at`
-- [ ] Create `Transaction` model and migration  
-- [ ] Transaction fields: `customer_id`, `last4`, `currency`, `amount`, `type`, `status`, `transaction_date`
-- [ ] Set up proper relationship
-- [ ] Add appropriate database indexes and foreign key constraints
+- [ ] Create `Customer` and `Transaction` models with migrations
+- [ ] Design appropriate database schema based on the CSV structure
+- [ ] Set up proper relationships between models
+- [ ] Add appropriate database indexes and constraints
 
 ### Task 2: CSV Upload Functionality  
 - [ ] Create file upload form with validation
-- [ ] Process CSV data: create/find customers and link transactions
-- [ ] create a service to process the csv data
-- [ ] Handle duplicate customers (match by email)
-- [ ] Handle errors and provide user feedback
+- [ ] Process CSV data and store in database
+- [ ] Handle duplicate customers appropriately
+- [ ] Provide user feedback for success/error cases
 
 ### Task 3: Data Display & Analytics
-- [ ] Create aggregated data dashboard with key metrics:
-  - [ ] Total number of transactions
-  - [ ] Total number of customers
-  - [ ] Total transaction amount (by currency) (bonus)
-  - [ ] Transaction breakdown by status (completed, pending, failed) (bonus)
-  - [ ] Transaction breakdown by type (payment, refund, chargeback) (bonus)
-- [ ] Create transactions listing page with pagination
-- [ ] Add search functionality (customer name, email)
-- [ ] Add filters for transaction type and status
+- [ ] Create a dashboard showing key transaction metrics and analytics
+- [ ] Build transactions listing page with pagination
+- [ ] Implement search and filtering capabilities
 
 ### Task 4: Code Quality (Bonus)
-- [ ] Use Form Request validation
-- [ ] Write basic feature tests
-- [ ] Follow Laravel conventions
+- [ ] Implement proper validation and error handling
+- [ ] Write tests for key functionality
+- [ ] Follow Laravel best practices and conventions
 
 ## Sample CSV Data
 
@@ -123,7 +114,8 @@ npm run build
 | **Functionality** | 50% |
 | **Code Quality** | 30% |
 | **Database Design** | 20% |
-| **Testing** | 10% |
+| **Documentation** | 5% |
+| **Testing** | 5% |
 
 ## Submission
 
