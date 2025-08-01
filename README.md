@@ -4,7 +4,6 @@
 
 Build a CSV upload and transaction management system using Laravel 12 with Vue.js/React with Inertia.js or API.
 
-
 ## Getting Started
 
 ### Prerequisites
@@ -50,7 +49,7 @@ Build a CSV upload and transaction management system using Laravel 12 with Vue.j
 
 ## Assignment Tasks
 
-Build a complete CSV upload and transaction management system from scratch.
+Build a simple CSV upload and transaction listing system.
 
 ### Task 1: Database Design & Models
 - [ ] Create `Customer` model and migration
@@ -71,9 +70,9 @@ Build a complete CSV upload and transaction management system from scratch.
 - [ ] Create aggregated data dashboard with key metrics:
   - [ ] Total number of transactions
   - [ ] Total number of customers
-  - [ ] Total transaction amount (by currency)
-  - [ ] Transaction breakdown by status (completed, pending, failed)
-  - [ ] Transaction breakdown by type (payment, refund, chargeback)
+  - [ ] Total transaction amount (by currency) (bonus)
+  - [ ] Transaction breakdown by status (completed, pending, failed) (bonus)
+  - [ ] Transaction breakdown by type (payment, refund, chargeback) (bonus)
 - [ ] Create transactions listing page with pagination
 - [ ] Add search functionality (customer name, email)
 - [ ] Add filters for transaction type and status
@@ -86,26 +85,6 @@ Build a complete CSV upload and transaction management system from scratch.
 ## Sample CSV Data
 
 Download the sample CSV file for testing: [sample-transactions.csv](./public/sample-transactions.csv)
-
-### CSV Format
-```csv
-customer_name,email,last4,currency,amount,type,status,transaction_date
-John Smith,john@example.com,1234,USD,150.50,payment,completed,2024-01-15 14:30:00
-Jane Doe,jane@example.com,5678,EUR,89.99,payment,pending,2024-01-16 09:15:00
-```
-
-### Field Requirements
-- **customer_name**: Full name for Customer model (required, max 255 chars)
-- **email**: Customer email address (required, unique per customer)
-- **last4**: Last 4 digits of payment method for Transaction (required, exactly 4 digits)
-- **currency**: Currency code for Transaction (required, 3 chars: USD, EUR, GBP)
-- **amount**: Transaction amount (required, decimal with 2 places)
-- **type**: Transaction type: payment, refund, or chargeback (required)
-- **status**: Transaction status: completed, pending, or failed (required)
-- **transaction_date**: Transaction timestamp (required, YYYY-MM-DD HH:MM:SS format)
-
-
-**Note**: During CSV processing, create Customer records if they don't exist (match by email), then create Transaction records linked to the customer via `customer_id`.
 
 ## Technical Requirements
 
