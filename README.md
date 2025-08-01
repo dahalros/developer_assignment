@@ -53,14 +53,18 @@ Build a CSV upload and transaction management system using Laravel 12 with Vue.j
 
 Build a complete CSV upload and transaction management system from scratch.
 
-### Task 1: Database Design
-- [ ] Create `Transaction` model and migration
-- [ ] Fields: `customer_name`, `email`, `last4`, `currency`, `amount`, `type`, `status`, `transaction_date`
-- [ ] Add appropriate database indexes
+### Task 1: Database Design & Models
+- [ ] Create `Customer` model and migration
+- [ ] Customer fields: `name`, `email`, `created_at`, `updated_at`
+- [ ] Create `Transaction` model and migration  
+- [ ] Transaction fields: `customer_id`, `last4`, `currency`, `amount`, `type`, `status`, `transaction_date`
+- [ ] Set up proper relationship: Customer hasMany Transactions, Transaction belongsTo Customer
+- [ ] Add appropriate database indexes and foreign key constraints
 
 ### Task 2: CSV Upload Functionality  
 - [ ] Create file upload form with validation
-- [ ] Process CSV data and store in database
+- [ ] Process CSV data: create/find customers and link transactions
+- [ ] Handle duplicate customers (match by email)
 - [ ] Handle errors and provide user feedback
 
 ### Task 3: Data Display
@@ -85,23 +89,26 @@ Jane Doe,jane@example.com,5678,EUR,89.99,payment,pending,2024-01-16 09:15:00
 ```
 
 ### Field Requirements
-- **customer_name**: Full name (required, max 255 chars)
-- **email**: Valid email address (required)
-- **last4**: Last 4 digits of payment method (required, exactly 4 digits)
-- **currency**: Currency code (required, 3 chars: USD, EUR, GBP)
+- **customer_name**: Full name for Customer model (required, max 255 chars)
+- **email**: Customer email address (required, unique per customer)
+- **last4**: Last 4 digits of payment method for Transaction (required, exactly 4 digits)
+- **currency**: Currency code for Transaction (required, 3 chars: USD, EUR, GBP)
 - **amount**: Transaction amount (required, decimal with 2 places)
-- **type**: payment, refund, or chargeback (required)
-- **status**: completed, pending, or failed (required)
-- **transaction_date**: YYYY-MM-DD HH:MM:SS format (required)
+- **type**: Transaction type: payment, refund, or chargeback (required)
+- **status**: Transaction status: completed, pending, or failed (required)
+- **transaction_date**: Transaction timestamp (required, YYYY-MM-DD HH:MM:SS format)
+
+**Note**: During CSV processing, create Customer records if they don't exist (match by email), then create Transaction records linked to the customer via `customer_id`.
 
 ## Technical Requirements
 
 ### Backend
 - Laravel 12 with Eloquent ORM
+- Customer and Transaction models with proper relationships
 - Form Request validation
 - RESTful controllers
 - Proper error handling
-- Database migrations with indexes
+- Database migrations with indexes and foreign key constraints
 
 ### Frontend  
 - Vue.js 3 with Inertia.js
